@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpotiStats</title>
+  <link href="src/output.css" rel="stylesheet">
+  <script type="module" src="popup.js"></script>
+</head>
+<body class="bg-[#1a1a1a] w-[340px] min-h-screen">
+
+  <!-- Header -->
+  <div class="flex items-center gap-3 px-5 py-5 border-b border-[#2a2a2a]">
+    <span class="text-white text-2xl font-bold tracking-tight">SpotiStats</span>
+  </div>
+
+  <!-- Time range -->
+  <div class="px-5 pt-4 pb-0">
+    <p class="text-[11px] font-medium text-[#888] uppercase tracking-widest mb-2.5">Time range</p>
+    <div class="flex gap-1.5">
+      <button class="time-btn flex-1 py-1.5 bg-[#1DB954] text-black rounded-full text-xs font-medium hover:cursor-pointer" data-range="short_term">4 weeks</button>
+      <button class="time-btn flex-1 py-1.5 bg-[#2a2a2a] text-[#aaa] border border-[#333] rounded-full text-xs hover:cursor-pointer" data-range="medium_term">6 months</button>
+      <button class="time-btn flex-1 py-1.5 bg-[#2a2a2a] text-[#aaa] border border-[#333] rounded-full text-xs hover:cursor-pointer" data-range="long_term">All time</button>
+    </div>
+  </div>
+
+  <!-- View toggle -->
+  <div class="px-5 pt-4 pb-5">
+    <p class="text-[11px] font-medium text-[#888] uppercase tracking-widest mb-2.5">View</p>
+    <div class="flex gap-2">
+      <button id="btn-tracks" class="view-btn flex-1 py-2.5 bg-[#242424] text-white border border-[#1DB954] rounded-xl text-sm flex flex-col items-center gap-1.5 hover:cursor-pointer" data-view="tracks">
+        <svg class="w-5 h-5 text-[#1DB954] fill-current" viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+        Top Tracks
+      </button>
+      <button id="btn-artists" class="view-btn flex-1 py-2.5 bg-[#242424] text-[#aaa] border border-[#333] rounded-xl text-sm flex flex-col items-center gap-1.5 hover:cursor-pointer" data-view="artists">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+        Top Artists
+      </button>
+    </div>
+  </div>
+
+  <!-- Track list -->
+  <div id="list" class="mx-3 mb-3 bg-[#141414] rounded-xl border border-[#2a2a2a] overflow-hidden">
+    <p class="text-[#555] text-xs text-center py-6">Connect Spotify to see your stats</p>
+  </div>
+
+  <!-- See all button -->
+  <div class="px-5 pb-5">
+    <button id="see-all" class="w-full py-2.5 bg-[#1DB954] text-black rounded-lg text-sm font-medium hover:cursor-pointer hover:scale-105 transition-transform ease-in-out">
+      Go
+    </button>
+  </div>
+
+</body>
+</html>

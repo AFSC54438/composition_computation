@@ -1,0 +1,27 @@
+{
+    "name": "SpotiStat",
+    "description": "Access information about your Spotify account",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "spot.png",
+      "default_title": "Spotify account data"
+    },
+    "host_permissions": ["https://api.spotify.com/*"],
+    "oauth2": {
+      "client_id": "229809720a194c11b6a96c379d3d49ed",
+      "scopes": ["user-top-read"]
+    },
+    "author": ["AFS"],
+    "web_accessible_resources": [
+    {
+      "resources": ["./popup.js", "./spot.js", "./auth.js", "src/output.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "identity"
+  ]
+}
