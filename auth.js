@@ -1,6 +1,6 @@
-const SPOTIFY_CLIENT_ID = "229809720a194c11b6a96c379d3d49ed";
-const SPOTIFY_CLIENT_SECRET = "ada2314a269247c0ab07b332c69c95f2";
-const REDIRECT_URI = chrome.identity.getRedirectURL();;
+const SPOTIFY_CLIENT_ID = ""; // use ur own client id
+const SPOTIFY_CLIENT_SECRET = ""; // use ur own client secret
+const REDIRECT_URI = chrome.identity.getRedirectURL();
 const SCOPES = "user-top-read";
 
 export async function getOrRefreshValidToken() {
