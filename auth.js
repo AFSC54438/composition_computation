@@ -114,7 +114,7 @@ async function exchangeCodeForTokens(authCode, redirectUri) {
 
 async function refreshAccessToken(refreshToken) {
   const tokenUrl = 'https://accounts.spotify.com/api/token';
-  const basicAuth = btoa(`${CLIENT_ID}:${CLIENT_SECRET}`);
+  const basicAuth = btoa(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`);
 
   const bodyParams = new URLSearchParams({
     grant_type: 'refresh_token',
